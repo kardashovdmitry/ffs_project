@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FfsProject</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= yield(:title) %></title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body background="#819FF7">
+    <div class="container-fluid">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">FFSDataBase</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <%= link_to "Исследователь",    index_path %>
+            </li>
+            <li>
+              <%= link_to "Home",    '#' %>
+            </li>
+            <li>
+              <%= link_to "Home",    '#' %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<%= yield %>
 
-</body>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="footer">
+  <small>
+    <a href="http://railstutorial.org/">Rails Tutorial</a>
+    by Michael Hartl
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "Исследователь",    index_path %></li>
+
+      <li><a href="http://news.railstutorial.org/">News</a></li>
+    </ul>
+  </nav>
+</footer>
+
+  </body>
 </html>
+
+
+
+
