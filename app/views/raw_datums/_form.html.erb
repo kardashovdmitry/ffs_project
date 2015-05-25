@@ -1,0 +1,63 @@
+<%= form_for @raw_datum do |f| %>
+
+  <% if @raw_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@raw_datum.errors.count, "error") %> prohibited
+        this raw_datum from being saved:
+      </h2>
+      <ul>
+        <% @raw_datum.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :groupID %><br>
+    <%= f.text_field :groupID %>
+  </p>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </p>
+
+  <p>
+    <%= f.label :FileName %><br>
+    <%= f.text_area :FileName %>
+  </p>
+
+  <p>
+    <%= f.label :linkToFile %><br>
+    <%= f.text_area :linkToFile %>
+  </p>
+
+  <p>
+    <%= f.label :startTime %><br>
+    <%= f.text_area :startTime %>
+  </p>
+
+  <p>
+    <%= f.label :repetitionNumber %><br>
+    <%= f.text_area :repetitionNumber %>
+  </p>
+
+  <p>
+    <%= f.label :kineticsNumber %><br>
+    <%= f.text_area :kineticsNumber %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+

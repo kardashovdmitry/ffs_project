@@ -1,0 +1,57 @@
+<p>
+  <strong>fileName</strong>
+  <%= @measurement.fileName %>
+</p>
+
+<p>
+  <strong>count</strong>
+  <%= @measurement.count %>
+</p>
+
+<p>
+  <strong>binTime</strong>
+  <%= @measurement.binTime %>
+</p>
+
+<p>
+  <strong>T</strong>
+  <%= @measurement.T %>
+</p>
+
+<p>
+  <strong>C</strong>
+  <%= @measurement.C %>
+</p>
+
+<p>
+  <strong>n</strong>
+  <%= @measurement.n %>
+</p>
+
+<p>
+  <strong>rpID</strong>
+  <%= @measurement.rpID %>
+</p>
+
+<p>
+  <strong>x</strong>
+  <%= @measurement.x %>
+</p>
+
+<p>
+  <strong>y</strong>
+  <%= @measurement.y %>
+</p>
+
+<p>
+  <strong>z</strong>
+  <%= @measurement.z %>
+</p>
+
+<p>
+  <strong>std</strong>
+  <%= @measurement.std %>
+</p>
+
+<%= link_to 'Назад', measurements_path %> |
+<%= link_to 'Изменить', edit_measurement_path(@measurement) %>

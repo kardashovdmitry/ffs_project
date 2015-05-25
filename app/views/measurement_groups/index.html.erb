@@ -1,0 +1,30 @@
+<h1>Список образцов</h1>
+
+  <td><a class='btn-primary'><%= link_to 'Добавить образец', new_measurement_group_path %></a></td>
+<td><%= link_to 'Скачать отчет', "/measurement_groups.pdf" %></td></br></br></br>
+
+<table class="table table-striped table-condensed">
+  <tr>
+    <th>sampleID</th>
+    <th>researcherID</th>
+    <th>deviceID</th>
+    <th>name</th>
+    <th>date</th>
+
+  </tr>
+
+  <% @measurement_groups.each do |measurement_group| %>
+    <tr>
+      <td><%= measurement_group.sampleID %></td>
+      <td><%= measurement_group.researcherID %></td>
+      <td><%= measurement_group.deviceID %></td>
+      <td><%= measurement_group.name %></td>
+      <td><%= measurement_group.date %></td>
+      <td><%= link_to 'Показать', measurement_group_path(measurement_group) %></td>
+      <td><%= link_to 'Изменить', edit_measurement_group_path(measurement_group) %></td>
+      <td><%= link_to 'Удалить', measurement_group_path(measurement_group),
+              method: :delete,
+              data: { confirm: 'Вы уверены?' } %></td>
+   </tr>
+  <% end %>
+</table>

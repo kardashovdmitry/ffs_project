@@ -1,0 +1,44 @@
+<p>
+  <strong>groupID</strong>
+  <%= @raw_datum.groupID %>
+</p>
+
+<p>
+  <strong>name</strong>
+  <%= @raw_datum.name %>
+</p>
+
+<p>
+  <strong>FileName</strong>
+  <%= @raw_datum.FileName %>
+</p>
+
+<p>
+  <strong>linkToFile</strong>
+  <%= @raw_datum.linkToFile %>
+</p>
+
+<p>
+  <strong>startTime</strong>
+  <%= @raw_datum.startTime %>
+</p>
+
+<p>
+  <strong>repetitionNumber</strong>
+  <%= @raw_datum.repetitionNumber %>
+</p>
+
+<p>
+  <strong>kineticsNumber</strong>
+  <%= @raw_datum.kineticsNumber %>
+</p>
+
+<p>
+  <strong>description</strong>
+  <%= @raw_datum.description %>
+</p>
+
+
+
+<%= link_to 'Назад', raw_datums_path %> |
+<%= link_to 'Изменить', edit_raw_datum_path(@raw_datum) %>

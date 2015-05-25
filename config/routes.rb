@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
 
 
- #resources :researchers
+ resources :measurement_groups do
+  resources :researchers
+ end
+ resources :raw_datums
+ resources :measurements
+ resources :samples
  resources :devices
  resources :researchers do
   collection do
     get 'researchers_pdf'
   end
 end
+
  root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

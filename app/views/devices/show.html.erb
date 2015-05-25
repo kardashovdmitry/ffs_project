@@ -1,2 +1,24 @@
-<h1>Devices#show</h1>
-<p>Find me in app/views/devices/show.html.erb</p>
+<p>
+  <strong>Name</strong>
+  <%= @device.name %>
+</p>
+
+<p>
+  <strong>Manufacturer</strong>
+  <%= @device.manufacturer %>
+</p>
+
+<p>
+  <strong>Model</strong>
+  <%= @device.model %>
+</p>
+
+<p>
+  <strong>Description</strong>
+  <%= @device.description %>
+</p>
+
+
+
+<%= link_to 'Назад', devices_path %> |
+<%= link_to 'Изменить', edit_device_path(@device) %>

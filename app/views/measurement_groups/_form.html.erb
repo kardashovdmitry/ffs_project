@@ -1,0 +1,54 @@
+<%= form_for @measurement_group do |f| %>
+
+  <% if @measurement_group.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@measurement_group.errors.count, "error") %> prohibited
+        this measurement_group from being saved:
+      </h2>
+      <ul>
+        <% @measurement_group.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <p>
+    <%= f.label :sampleID %><br>
+    <%= f.text_field :sampleID %>
+    <%= collection_select(:researcherID, :researcherID, Sample.all, :id, :sampleID) %>
+  </p>
+
+  <p>
+
+    <%= f.label :researcherID %><br>
+    <%= f.text_area :researcherID %>
+    <%= collection_select(:researcherID, :researcherID, Researcher.all, :id, :researcherID) %>
+  </p>
+
+  <p>
+    <%= f.label :deviceID %><br>
+    <%= f.text_area :deviceID %>
+     <%= collection_select(:researcherID, :researcherID, Device.all, :id, :deviceID) %>
+  </p>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </p>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.text_area :date %>
+  </p>
+
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+

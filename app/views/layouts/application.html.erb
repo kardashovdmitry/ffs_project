@@ -23,10 +23,16 @@
               <%= link_to "Исследователь", controller: 'researchers'  %>
             </li>
             <li>
-              <%= link_to "Home",    '#' %>
+              <%= link_to "Прибор",    controller: 'devices' %>
             </li>
             <li>
-              <%= link_to "Home",    '#' %>
+              <%= link_to "Образец",    controller: 'samples' %>
+            </li>
+            <li>
+              <%= link_to "Измерение",    controller: 'measurements' %>
+            </li>
+            <li>
+              <%= link_to "Группа измерений",    controller: 'measurement_groups' %>
             </li>
           </ul>
         </div>
@@ -46,6 +52,10 @@
   <nav>
     <ul>
       <li><%= link_to "Исследователь",    controller: 'researchers' %></li>
+      <li><%= link_to "Прибор",    controller: 'devices' %></li>
+      <li><%= link_to "Образец",    controller: 'samples' %></li>
+      <li><%= link_to "Измерение",    controller: 'measurements' %></li>
+      <li><%= link_to "Группа измерений",    controller: 'measurement_groups' %></li>
 
     </ul>
   </nav>

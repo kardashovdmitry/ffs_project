@@ -1,0 +1,28 @@
+<p>
+  <strong>sampleID</strong>
+  <%= @measurement_group.sampleID %>
+</p>
+
+<p>
+  <strong>researcherID</strong>
+  <%= @measurement_group.researcherID %>
+</p>
+
+<p>
+  <strong>deviceID</strong>
+  <%= @measurement_group.deviceID %>
+</p>
+
+<p>
+  <strong>name</strong>
+  <%= @measurement_group.name %>
+</p>
+
+<p>
+  <strong>date</strong>
+  <%= @measurement_group.date %>
+</p>
+
+
+<%= link_to 'Назад', measurement_groups_path %> |
+<%= link_to 'Изменить', edit_measurement_group_path(@measurement_group) %>
