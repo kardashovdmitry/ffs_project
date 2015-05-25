@@ -10,17 +10,17 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body background="#819FF7">
+  <body>
     <div class="container-fluid">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">FFSDataBase</a>
+          <a class="navbar-brand" href="/">FFSDataBase</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li>
-              <%= link_to "Исследователь",    index_path %>
+              <%= link_to "Исследователь", controller: 'researchers'  %>
             </li>
             <li>
               <%= link_to "Home",    '#' %>
@@ -40,14 +40,13 @@
 
     <footer class="footer">
   <small>
-    <a href="http://railstutorial.org/">Rails Tutorial</a>
-    by Michael Hartl
+    Created by
+    <a href="http://vk.com/id89261448">Kardashov Dmitry</a>
   </small>
   <nav>
     <ul>
-      <li><%= link_to "Исследователь",    index_path %></li>
+      <li><%= link_to "Исследователь",    controller: 'researchers' %></li>
 
-      <li><a href="http://news.railstutorial.org/">News</a></li>
     </ul>
   </nav>
 </footer>

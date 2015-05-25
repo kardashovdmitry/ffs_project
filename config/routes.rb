@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-   match '/index',    to: 'researhers#index',    via: 'get'
-  get 'static_pages/home'
-
-  get 'static_pages/about'
-
+ #resources :researchers
+ resources :researchers do
+  collection do
+    get 'researchers_pdf'
+  end
+end
+ root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
