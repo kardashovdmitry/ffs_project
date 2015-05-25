@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+
+
  #resources :researchers
+ resources :devices
  resources :researchers do
   collection do
     get 'researchers_pdf'
